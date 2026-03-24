@@ -1,0 +1,6 @@
+PATIENT RECORDS - STRICTLY CONFIDENTIAL
+========================================
+Room 302: John Smith     | HR: 72 | BP: 120/80 | O2: 98%
+Room 304: Maria Garcia   | HR: 68 | BP: 118/76 | O2: 99%
+Room 307: Robert Johnson | HR: 88 | BP: 135/85 | O2: 95%
+Room 315: James Wilson   | HR: 92 | BP: 142/92 | O2: 94% | ALERT: arrhythmia
