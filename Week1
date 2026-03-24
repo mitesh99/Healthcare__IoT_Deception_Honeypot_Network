@@ -1,0 +1,11 @@
+DAY 1	System Update + Docker Install
+
+STEP 1	System Update	Goal:
+sudo apt update && sudo apt upgrade -y
+
+STEP 2	Docker Dependencies	Goal:
+sudo apt install -y ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+
+
+
