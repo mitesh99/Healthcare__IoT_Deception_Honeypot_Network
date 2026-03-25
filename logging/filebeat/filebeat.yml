@@ -1,0 +1,11 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/honeypot/cowrie/*.json
+    json.keys_under_root: true
+    json.overwrite_keys: true
+    tags: ["cowrie"]
+
+output.logstash:
+  hosts: ["192.168.100.3:5044"]
