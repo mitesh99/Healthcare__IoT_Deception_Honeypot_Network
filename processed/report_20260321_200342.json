@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-03-21T20:03:42.561898",
+  "summary": {
+    "unique_ips": 1,
+    "unique_usernames": 6,
+    "unique_passwords": 6,
+    "total_commands": 0,
+    "malware_samples": 0
+  },
+  "top_attackers": [
+    [
+      "192.168.100.1",
+      18
+    ]
+  ],
+  "top_usernames": [
+    [
+      "admin",
+      6
+    ]
+  ],
+  "top_passwords": [
+    [
+      "admin",
+      4
+    ],
+    [
+      "12345",
+      1
+    ],
+    [
+      "admin12345",
+      1
+    ]
+  ],
+  "recent_commands": [],
+  "malware_hashes": []
+}
