@@ -240,9 +240,9 @@ python3 analysis/reports/generate_final_report.py
 | # | Name | Role |
 |---|------|------|
 | 1 | Mitesh | Lead Developer / Security Engineer |
-| 2 | Team Member 2 | Backend Developer |
-| 3 | Team Member 3 | Frontend Developer / Dashboard |
-| 4 | Team Member 4 | DevOps / Documentation |
+| 2 | Minakshi | Backend Developer |
+| 3 | Mahek 3 | Frontend Developer / Dashboard |
+| 4 | Arkadip 4 | DevOps / Documentation |
 
 ---
 
