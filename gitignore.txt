@@ -1,0 +1,42 @@
+# ============================================================
+# Healthcare IoT Honeypot — .gitignore
+# ============================================================
+
+# Environment files (NEVER commit these!)
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Data and logs (too large + sensitive)
+data/logs/
+data/processed/
+data/malware/
+data/GeoLite2-City.mmdb
+data/iocs/
+
+# Docker volumes
+esdata/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.log
+*.bak
