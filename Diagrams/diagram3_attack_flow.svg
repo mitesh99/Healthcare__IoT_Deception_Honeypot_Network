@@ -1,0 +1,100 @@
+<svg width="100%" viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <style>
+    .t  { font: 400 14px "Segoe UI",Arial,sans-serif; fill: #1a1a2e; }
+    .ts { font: 400 12px "Segoe UI",Arial,sans-serif; fill: #445863; }
+    .th { font: 500 14px "Segoe UI",Arial,sans-serif; fill: #1a1a2e; }
+  </style>
+</defs>
+
+<!-- Title -->
+<text class="th" x="340" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#0C1A2A">Attack Flow + Threat Intelligence Pipeline</text>
+
+<!-- PHASE 1: Attack Arrival -->
+<rect x="30" y="44" width="88" height="26" rx="6" fill="#0C1A2A" stroke="none"/>
+<text x="74" y="62" text-anchor="middle" font-size="11" font-weight="700" fill="#90C9F8" font-family="Arial">PHASE 1</text>
+
+<rect x="30" y="78" width="620" height="70" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1"/>
+<text class="th" x="340" y="100" text-anchor="middle" fill="#A32D2D">Attacker Initiates Attack</text>
+
+<!-- 3 attack types in phase 1 -->
+<rect x="50" y="112" width="160" height="26" rx="6" fill="#F7C1C1" stroke="#A32D2D" stroke-width="0.5"/>
+<text class="ts" x="130" y="130" text-anchor="middle" fill="#A32D2D">SSH Brute Force :2222</text>
+
+<rect x="250" y="112" width="180" height="26" rx="6" fill="#F7C1C1" stroke="#A32D2D" stroke-width="0.5"/>
+<text class="ts" x="340" y="130" text-anchor="middle" fill="#A32D2D">Credential Stuffing (admin/root)</text>
+
+<rect x="470" y="112" width="160" height="26" rx="6" fill="#F7C1C1" stroke="#A32D2D" stroke-width="0.5"/>
+<text class="ts" x="550" y="130" text-anchor="middle" fill="#A32D2D">Command Injection</text>
+
+<!-- Arrow phase 1 to 2 -->
+<line x1="340" y1="148" x2="340" y2="168" stroke="#1563BE" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- PHASE 2: Honeypot Capture -->
+<rect x="30" y="168" width="88" height="26" rx="6" fill="#1563BE" stroke="none"/>
+<text x="74" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Arial">PHASE 2</text>
+
+<rect x="30" y="200" width="620" height="80" rx="10" fill="#E6F1FB" stroke="#1563BE" stroke-width="1.5"/>
+<text class="th" x="340" y="222" text-anchor="middle" fill="#1563BE">Cowrie Honeypot Captures + Logs Attack</text>
+<text class="ts" x="340" y="240" text-anchor="middle">Records: src_ip, username, password, commands, file downloads, session duration</text>
+
+<!-- JSON output example -->
+<rect x="60" y="252" width="560" height="22" rx="4" fill="#0C1A2A"/>
+<text x="340" y="267" text-anchor="middle" font-size="11" fill="#4ADE80" font-family="Courier New">{"eventid":"cowrie.login.failed","src_ip":"1.2.3.4","username":"admin","password":"123456","timestamp":"2026-03-21T14:30:00Z"}</text>
+
+<!-- Arrow phase 2 to 3 -->
+<line x1="340" y1="282" x2="340" y2="302" stroke="#854F0B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- PHASE 3: Log Processing -->
+<rect x="30" y="302" width="88" height="26" rx="6" fill="#854F0B" stroke="none"/>
+<text x="74" y="320" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Arial">PHASE 3</text>
+
+<rect x="30" y="334" width="620" height="80" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text class="th" x="340" y="356" text-anchor="middle" fill="#854F0B">Filebeat + Logstash Processing Pipeline</text>
+
+<rect x="50" y="368" width="130" height="36" rx="6" fill="#FAC775" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ts" x="115" y="383" text-anchor="middle" fill="#412402">Filebeat</text>
+<text x="115" y="397" text-anchor="middle" font-size="10" fill="#633806" font-family="Arial">ships log file</text>
+
+<line x1="180" y1="386" x2="230" y2="386" stroke="#854F0B" stroke-width="1" marker-end="url(#arrow)"/>
+
+<rect x="230" y="368" width="160" height="36" rx="6" fill="#EF9F27" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ts" x="310" y="383" text-anchor="middle" fill="#412402">Parse + Add GeoIP</text>
+<text x="310" y="397" text-anchor="middle" font-size="10" fill="#633806" font-family="Arial">MaxMind database</text>
+
+<line x1="390" y1="386" x2="430" y2="386" stroke="#854F0B" stroke-width="1" marker-end="url(#arrow)"/>
+
+<rect x="430" y="368" width="190" height="36" rx="6" fill="#FAC775" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ts" x="525" y="383" text-anchor="middle" fill="#412402">Classify Attack Type</text>
+<text x="525" y="397" text-anchor="middle" font-size="10" fill="#633806" font-family="Arial">bruteforce / credential_theft / etc</text>
+
+<!-- Arrow phase 3 to 4 -->
+<line x1="340" y1="414" x2="340" y2="434" stroke="#1563BE" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- PHASE 4: Storage + Intelligence -->
+<rect x="30" y="434" width="88" height="26" rx="6" fill="#0C1A2A" stroke="none"/>
+<text x="74" y="452" text-anchor="middle" font-size="11" font-weight="700" fill="#90C9F8" font-family="Arial">PHASE 4</text>
+
+<rect x="30" y="466" width="620" height="72" rx="10" fill="#E3EDF9" stroke="#1563BE" stroke-width="1.5"/>
+<text class="th" x="340" y="488" text-anchor="middle" fill="#1563BE">Threat Intelligence + Visualization</text>
+
+<rect x="50" y="500" width="120" height="28" rx="6" fill="#B5D4F4" stroke="#1563BE" stroke-width="0.5"/>
+<text class="ts" x="110" y="519" text-anchor="middle" fill="#042C53">Elasticsearch</text>
+
+<rect x="190" y="500" width="110" height="28" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text class="ts" x="245" y="519" text-anchor="middle" fill="#26215C">Kibana Charts</text>
+
+<rect x="320" y="500" width="130" height="28" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ts" x="385" y="519" text-anchor="middle" fill="#04342C">Flask Dashboard</text>
+
+<rect x="470" y="500" width="150" height="28" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text class="ts" x="545" y="519" text-anchor="middle" fill="#173404">Python IoC Reports</text>
+
+<!-- Phase connectors label -->
+<text class="ts" x="350" y="160" fill="#1563BE">captures every attempt</text>
+<text class="ts" x="350" y="294" fill="#854F0B">JSON logs written to disk</text>
+<text class="ts" x="350" y="426" fill="#1563BE">enriched event stored</text>
+</svg>
