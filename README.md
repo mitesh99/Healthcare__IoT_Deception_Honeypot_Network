@@ -240,8 +240,8 @@ python3 analysis/reports/generate_final_report.py
 |---|------|------|
 | 1 | Mitesh | Lead Developer / Security Engineer |
 | 2 | Minakshi | Backend Developer |
-| 3 | Mahek 3 | Frontend Developer / Dashboard |
-| 4 | Arkadip 4 | DevOps / Documentation |
+| 3 | Mahek | Frontend Developer / Dashboard |
+| 4 | Arkadip | DevOps / Documentation |
 
 ---
 
