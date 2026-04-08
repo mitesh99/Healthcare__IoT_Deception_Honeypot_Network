@@ -142,7 +142,6 @@ healthcare-iot-honeypot/
 ├── monitoring/
 │   ├── prometheus/
 │   │   └── prometheus.yml
-│   └── grafana/
 ├── docker-compose.yml
 ├── requirements.txt
 ├── .env.example
