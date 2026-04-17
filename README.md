@@ -251,4 +251,4 @@ MIT License — For educational and research purposes only.
 
 ---
 
-*Healthcare IoT Honeypot Network — Infotact Solutions & Co. — Cybersecurity Track*
+*Healthcare IoT Honeypot Network — Infotact Solutions Pvt Ltd*
